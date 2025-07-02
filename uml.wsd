@@ -1,0 +1,24 @@
+@startuml
+         
+class TeacherComponentGUI {
+  - assignmentComboBox: JComboBox<String>
+  - btnEnterGrade: JButton
+  - btnViewResults: JButton
+  - btnViewReport: JButton
+  - btnGenerateQR: JButton
+  - connection: Connection
+  - statement: PreparedStatement
+  - selectedAssignment: String
+  + TeacherComponentGUI()
+  - showGradeDialog(): void
+  - viewResults(): void
+  - showReportDialog(): void
+  - isStudentIDExists(studentID: String): boolean
+}
+
+TeacherComponentGUI --> JComboBox
+TeacherComponentGUI --> JButton
+TeacherComponentGUI --> Connection
+TeacherComponentGUI --> PreparedStatement
+
+@enduml
